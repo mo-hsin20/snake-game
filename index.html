@@ -84,8 +84,12 @@
             snake.pop();
         };
 
-        moveSnake();
-        drawGame();
+        const gameLoop = () => {
+            moveSnake();
+            drawGame();
+        };
+    setInterval( gameLoop, 150 );
+    
 
     </script>
 
