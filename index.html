@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Snake Game</title>
     <style>
         canvas {
@@ -11,11 +11,11 @@
         }
     </style>
 </head>
+
 <body>
 
     <h1>Snake</h1>
-    <canvas id="gameCanvas" width="400"
-            height="400"></canvas>
+    <canvas id="gameCanvas" width="400" height="400"></canvas>
     <p id="info"></p>
 
     <script>
@@ -75,8 +75,20 @@
         // Step 5: Improvements
         //
         // ===================================
+        const moveSnake = () => {
+            const head = {
+                x: snake[0].x + direction.x,
+                y: snake[0].y + direction.y
+            };
+            snake.unshift(head);
+            snake.pop();
+        };
+
+        moveSnake();
+        drawGame();
 
     </script>
 
 </body>
+
 </html>
