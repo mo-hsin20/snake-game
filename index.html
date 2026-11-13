@@ -5,11 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Snake Game</title>
-    <style>
-        canvas {
-            border: 1px solid black;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -48,7 +44,7 @@
                 gridSize, gridSize
             );
 
-            ctx.fillStyle = "black";
+            ctx.fillStyle = "green";
             for (const segment of snake) {
                 ctx.fillRect(
                     segment.x * gridSize,
