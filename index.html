@@ -92,12 +92,23 @@
                 snake.pop();
             }
         };
-
+        const isGameOver = () => {
+            const head = snake[0];
+            if (head.x < 0 || head.x >= tileCount || head.y < 0 || head.y >= tileCount) {
+                return true;
+            }
+            return false;
+        };
         const gameLoop = () => {
             moveSnake();
+            if (isGameOver()) {
+                clearInterval(gameInterval);
+                document.getElementById("info").textContent = "Game over! Score: " + score;
+                return;
+            }
             drawGame();
         };
-        setInterval(gameLoop, 150);
+        const gameInterval = setInterval(gameLoop, 150);
         document.addEventListener("keydown", (event) => {
 
             if (event.key === "ArrowUp" && direction.y !== 1) {
