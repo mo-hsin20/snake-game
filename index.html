@@ -86,6 +86,8 @@
                     x: Math.floor(Math.random() * tileCount),
                     y: Math.floor(Math.random() * tileCount)
                 };
+                score++;
+                document.getElementById("info").textContent = `Score: ${score}`;
             } else {
                 snake.pop();
             }
