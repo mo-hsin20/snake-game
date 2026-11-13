@@ -92,6 +92,7 @@
                 snake.pop();
             }
         };
+        let highScore = Number(localStorage.getItem("highScore"));
         let gameOver = false;
         const isGameOver = () => {
             const head = snake[0];
@@ -121,8 +122,12 @@
         const gameLoop = () => {
             moveSnake();
             if (isGameOver()) {
+                if (score > highScore) {
+                    highScore = score;
+                    localStorage.setItem("highScore", highScore);
+                }
                 clearInterval(gameInterval);
-                document.getElementById("info").textContent = "Game over! Score: " + score + ". Press Space to restart.";
+                document.getElementById("info").textContent = "Game over! Score: " + score + ". High score: " + highScore + ". Press Space to restart.";
                 gameOver = true;
                 return;
             }
