@@ -102,6 +102,7 @@
         };
         let highScore = Number(localStorage.getItem("highScore"));
         let gameOver = false;
+        let isPaused = false;
         const isGameOver = () => {
             const head = snake[0];
             if (head.x < 0 || head.x >= tileCount || head.y < 0 || head.y >= tileCount) {
@@ -143,6 +144,16 @@
         };
         let gameInterval = setInterval(gameLoop, 150);
         document.addEventListener("keydown", (event) => {
+            if ((event.key === "p" || event.key === "P") && !gameOver)  {
+                isPaused = !isPaused;
+                if (isPaused) {
+                    clearInterval(gameInterval);
+                    document.getElementById("info").textContent = "Game paused. Press 'P' to resume.";
+                } else {
+                    gameInterval = setInterval(gameLoop, 150);
+                    document.getElementById("info").textContent = "Score: " + score;
+                }
+            }
             if (event.key === " " && gameOver) {
                 resetGame();
             }
