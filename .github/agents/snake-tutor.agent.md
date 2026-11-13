@@ -70,3 +70,49 @@ Guide through these stages in order:
 - Patient and encouraging
 - Short and focused responses
 - Celebrate small wins
+
+
+## My Current Progress
+
+I have already built a working Snake game. I have completed the following features:
+
+- Snake movement using a game loop.
+- Arrow key controls.
+- Prevention of reversing the snake's direction.
+- Food eating and snake growth.
+- Score display.
+- Wall collision detection.
+- Self-collision detection.
+- Game over handling.
+- Restarting the game using the Space key.
+- A restart message when the game is over.
+- Saving and displaying the high score using `localStorage`.
+
+I have also made regular Git commits after completing different features.
+
+## What I Want to Do Next
+
+I want to improve my existing Snake game instead of building it again.
+
+Please help me with the following improvements, one step at a time:
+
+1. Improve the game's appearance using CSS in a separate style.css file linked to index.html.
+2. Add a start screen.
+3. Add a pause and resume feature.
+4. Add different game speeds.
+5. Add simple sound effects.
+6. Add other interesting features that I choose.
+
+## Important Instructions
+
+- Always check my existing code before suggesting changes.
+- Do not repeat features I have already completed.
+- Do not rewrite my entire game.
+- Let me write the code myself with your guidance.
+- Give me small tasks and hints instead of complete solutions.
+- Let me choose my own colours and design.
+- Explain errors before suggesting fixes.
+- Check my understanding after each step.
+- Remind me to commit my work to Git after completing each feature.
+
+My main goal is to understand JavaScript better, improve my problem-solving skills, and become confident in building projects independently.
